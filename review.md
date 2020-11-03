@@ -4,62 +4,66 @@
 
 Reviewer Name: Nathan Eigbe
 
-Paper Title: HYDRA: The Kernel of a Multiprocessor Operating System
+Paper Title: Limiting the Damage Potential of Discretionary Trojan Horses
 
 ## Summary
-Carnegie Mellon Researchers discuss their efforts to develop a framework 
-for an Operating System.
+Karger discusses various methods to detect and deter applications that seek to
+illegaly access or modify existing files.
 
 ### Problem and why we care
-Problem is coming up with the framework that is both flexible and easy 
-to replicate. We should care because in doing so, because it allows us set
-a base model for developing operating systems, from which we can analyze and
-optimize components easily.
+The existance of malicious programs is an issue plaguing computer owners. We want
+users to be able to know what any given application is doing to their computer and
+control said application.
+
 ### Gap in current approaches
-At the time the paper was written, the development of Operating Systems
-was slow due to being an inherently methodical process, as well as there 
-being no specific standard or template to work from. 
+Current common approach separates information into classes, and prevents info from higher classes being 
+leaked to lower classes. This method doesn't work for discretionary environments such as access control 
+lists or capability lists. 
 
 ### Hypothesis, Key Idea, or Main Claim
-The HYDRA's key Idea, as mentioned, is to come up with a system that
-is flexible and replicable. 
+The Name Checking Subsystem is the optimal design standard for tracking
+Trojan Horses in a discretionary environment.
 
 ### Method for Proving the Claim
-In the paper are details on how the HYDRA
-may potentially achieve this goal. These include, at the time,
-notable rejections of various conventions, such as a hierarchal structure.
+The paper compares the NCS with other popular methods for 
+deterring Trojans, such as the Need-To-Know framework 
+and explains why they are less efficient or robust than the NCS.
 
 ### Method for evaluating
+The paper details various roadblocks that the framework
+may encounter (Batch File Access Commands, Connecting the User to the Name Checking Subsystem) 
+and expleins how each of these issues may be sidestepped.
 
 ### Contributions: what we take away
-The HYDRA system is an interesting idea, though at the time of
-publication, only an idea. It is difficult to say how effective 
-its innovations are when there is little seen of it's actual
-functiality
+While the lack of any concrete data provides any details
+to take away, the article does provide a number of intuitive 
+security strategies that are worth implementing, particularly 
+in the discretionary environment.
 
 ## Pros (3-6 bullets)
-- Provides in-depth descriptions on the mentality of design choices
+- Method is ultimately unintrusive
 - Clearly lists out the goals and accomplishes them
-- Focuses on each component of the system
+- Provides alternatives and explains why the NCS is better
+
 ## Cons (3-6 bullets)
-- No actual attempt to implement the system
-- Not much comparison to contemporaries
-- No actual data to be had
+- Directory Tree Idea lacks user-friendliness
+- Framework only applies specifically to the discretionary environment
+- Explanation on Trojan could have been more in depth
 
 ### What is your analysis of the proposed?
 
-In reading my paper, I noticed it was mostly a proposition,
-as opposed to an actual methodical/iterative documentation.
-The HYDRA concept only existed as a concept, and thus one could
-not objectively comment on it's efficiency compared to it's 
-potential contemporaries. That said, as a proposition it holds
-up well as it backs up it's claims with sound knowledge of the 
-components and functions and their intentions.
+The NCS brings up some intuitive design choices in 
+avoiding Trojans though it's case it doesn't provide any 
+hard data performance wise on how a discretionary system 
+using the NCS would surpass a non-discressionary system
+simply using a class system. Overall the general premise is
+sound though a bit more depth on this issue would've been
+appreciated.
+
 
 ## Details Comments, Observations, Questions
 
-Was there any actual implementation of the HYDRA afterwords? 
-If not were any ideas from the HYDRA standardized in the industry?
-A follow-up paper exploring this would be interesting.
+What systems use the NCS as a security feature? 
+Do any features from the NCS apply to non-discretionary systems?
 
 
